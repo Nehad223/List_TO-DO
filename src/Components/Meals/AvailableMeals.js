@@ -35,13 +35,13 @@ const AvailableMeals = () => {
   };
   const meallist = Demmy_Meals.map((meal) => (
     <div className='row li' key={meal.id}>
-      <div className='col-10'>
+      <div className='col-10  col-sm-9   '>
         <h4>{meal.name}</h4>
         <p>{meal.description}</p>
         <h4 className='price'>${meal.price}</h4>
         <hr className="my-hr" />
       </div>
-      <div className='col-2 '>
+      <div className='col-2 col-sm-3   '>
         <button className='add-btn' onClick={()=> Add(meal.id)}>+ Add</button>
       </div>
     </div>
