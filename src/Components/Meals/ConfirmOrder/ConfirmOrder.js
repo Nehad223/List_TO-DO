@@ -7,7 +7,6 @@ const ConfirmOrder = () => {
   const[Demmy_Meals,setDemmy_Meals]=useState([]);
   useEffect(()=>{ axios.get('https://nehadshretahh.pythonanywhere.com/items/')
     .then((response=>{
-      console.log(response.data);
       setDemmy_Meals(response.data.items)
     }))
     
@@ -76,10 +75,10 @@ function f(){
          </div>):"" }
       </div>)}
         <div className='row' >
-          <div className='col-lg-9 col-md-9'>
+          <div className='col-9 col-9'>
            <h4>Total Amount</h4>
           </div>
-          <div className='col-lg-3 col-md-3'>
+          <div className='col-3 col-3'>
             <h4 className='totalAmount'>${f() }</h4>
           </div>
      

@@ -45,7 +45,7 @@ const DataCustomer = () => {
     if(!errors.name && !errors.location && !errors.number){ 
       await addDoc(dataCollection,{FormData});
       setCount([]);
-      navigate('/');
+      navigate('/List_TO-DO');
       
     }
        
