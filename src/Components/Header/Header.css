@@ -15,6 +15,7 @@ header{
     border: solid 1px #f23711;
     overflow: hidden;
     align-items: center;
+    text-align: center;
 }
 header h2 {
     color: #fff;
@@ -65,5 +66,15 @@ header button span{
 .main img{
     width: 100%;
     height: var(--heightImg);
+
+}
+@media(max-width:575px){
+  .Header-But{
+    margin: auto;
+  }
+  header button{
+    width: 140px;
+    height: 35px;}
+   
 
 }

@@ -7,7 +7,9 @@ import { db } from '../../config/firebase.js';
 import { useSchema } from './Validation/Validation.js';
 import { useNavigate } from 'react-router-dom';
 import { CounterContext } from '../../App.js';
+
 const DataCustomer = () => {
+  var root = document.querySelector(':root');
   const navigate=useNavigate();
   const location=useLocation();
    const invoice=location.state.invoice;
@@ -17,6 +19,8 @@ const DataCustomer = () => {
     root.style.setProperty('--visibility','hidden');
     root.style.setProperty('--color','#fff');
     root.style.setProperty('--heightImg','250px');
+    root.style.setProperty('--heightHead','55px');
+    window.onpopstate=function(event){window.location.reload();}
     const[FormData,setFormData]=useState({
       name:"",
       location:"",
@@ -61,8 +65,9 @@ const DataCustomer = () => {
 
   return (
 
-    <div className='container '>
-       <h1>Customer Data</h1>
+    <div className='container a '>
+      <div>
+      <h1>Customer Data</h1>
        <form className='form' onSubmit={handleSubmit}>
         <input type='text' className='Name-Input' name='name' placeholder='Name...' value={FormData.name} onChange={handleChange} /><br/>
         {errors.name && <div className='Name-Error'>{errors.name}</div>}
@@ -71,7 +76,9 @@ const DataCustomer = () => {
         <input type='text'  className='Phone-Input' name='number' placeholder='phone number...' value={FormData.number} onChange={handleChange}  /><br/>
         {errors.number && <div className='Number-Error'>{errors.number}</div>}    
         <button>Confirm</button> 
-      </form>
+      </form>   
+      </div>
+      
     </div>
   )
 }

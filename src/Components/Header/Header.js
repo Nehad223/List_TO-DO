@@ -9,10 +9,10 @@ const Header = () => {
  <header>
         <div className='container'>
             <div className='row'>
-                <div className='col-g-6 col-md-6'>
+                <div className='col-g-6 col-md-6 col-sm-6'>
                     <h2>MeatApp</h2>
                 </div>
-                <div className='col-g-6 col-md-6 Header-Button'>
+                <div className='col-g-6 col-md-6 col-sm-6 Header-Button'>
                     <HeaderButton/>
 
                 </div>
