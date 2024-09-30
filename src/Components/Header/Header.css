@@ -2,6 +2,7 @@
 :root{
     --visibility:visible;
     --heightImg:300px;
+    --heightHead:auto;
 }
 .Header-Button{
     visibility: var(--visibility);
@@ -9,7 +10,7 @@
 
 header{
     width: 100%;
-    height: auto;
+    height: var(--heightHead);
     padding: 10px 0px;
     background-color: #f23711;
     border: solid 1px #f23711;
@@ -75,6 +76,4 @@ header button span{
   header button{
     width: 140px;
     height: 35px;}
-   
-
 }

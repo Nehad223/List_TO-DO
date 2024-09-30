@@ -19,7 +19,7 @@ const DataCustomer = () => {
     root.style.setProperty('--visibility','hidden');
     root.style.setProperty('--color','#fff');
     root.style.setProperty('--heightImg','250px');
-    root.style.setProperty('--heightHead','55px');
+    root.style.setProperty('--heightHead','50px');
     window.onpopstate=function(event){window.location.reload();}
     const[FormData,setFormData]=useState({
       name:"",
